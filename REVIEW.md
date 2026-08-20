@@ -47,12 +47,21 @@ attention.
 
 ## What to look for
 
-The **repository half** of this spec — its own `.github/REVIEW.md` — lists what
-to look for in this codebase: its domain, the footguns that bite it, the
-conventions it holds. Treat that list as part of these instructions, not as a
-separate document. If the repo also has a `CLAUDE.md`, read it too; it is the
-source for that package's conventions and the repo spec will not restate all of
-it.
+If the repo has a **repository half** — its own `.github/REVIEW.md` — it lists
+what to look for here: the domain, the footguns that bite it, the invariants
+nothing in the code enforces. Treat that list as part of these instructions, not
+as a separate document.
+
+Most repos have none, and that is the normal case rather than a gap. A repository
+half is for what a competent reviewer could **not** derive from the code in front
+of it — a cross-cutting rule like "changing this signature means changing that
+other package too", a numerical trap, a policy that gets releases rejected. It is
+worth writing once a review has missed something that a note would have caught,
+not before. Where there is none, review on ordinary command of the language, its
+libraries, and what the diff is trying to do.
+
+Either way, read the repo's `CLAUDE.md` if it has one: that is the source for its
+conventions, and a repository half will not restate them.
 
 ## Before saying it is clean
 
