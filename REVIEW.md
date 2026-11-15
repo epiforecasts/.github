@@ -39,6 +39,12 @@ These are not findings, however true they are. Do not report them:
   and it is not reviewed here
 - Restating that something is correct, idiomatic, or well done
 
+Where a finding is about behaviour, reproduce it with a run, and say whether the base branch behaves the same way. Behaviour the base branch already has, in lines the change does not touch, is not a finding unless the change makes it reachable or relies on it.
+
+When a finding is one instance of a pattern, say so and list the other places it occurs, so the fix can cover all of them.
+
+A test is a finding when its name or comments say it guards a behaviour but it passes with that behaviour broken.
+
 A review that ends with nothing to say is a good outcome, and a common one on a
 change that has already been through a round. Reaching for something to say is
 worse than saying nothing: it costs a commit, another round, and the reader's
