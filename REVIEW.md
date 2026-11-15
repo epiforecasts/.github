@@ -43,7 +43,7 @@ Where a finding is about behaviour, reproduce it with a run, and say whether the
 
 When a finding is one instance of a pattern, say so and list the other places it occurs, so the fix can cover all of them.
 
-A test is a finding when its name or comments say it guards a behaviour but it passes with that behaviour broken.
+A test the change adds or relies on is a finding when its name or comments say it guards a behaviour but it passes with that behaviour broken.
 
 A review that ends with nothing to say is a good outcome, and a common one on a
 change that has already been through a round. Reaching for something to say is
